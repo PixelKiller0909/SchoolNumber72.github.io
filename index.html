@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мактаби №72 - Деҳаи Кулканд</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(to bottom, rgba(0, 128, 128, 0.7), rgba(0, 128, 64, 0.7)),
+                        url('photo_2024-12-15_16-12-12.jpg') no-repeat center center fixed;
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            animation: fadeInDown 1s;
+            position: sticky; /* Sticks to the top on scroll */
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(87, 87, 87, 0.8);
+            transform: scale(1.1);
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+            margin: 1.5rem auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            animation: fadeIn 2s ease;
+        }
+        section:not(:last-of-type) {
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section#home {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        section#about {
+            background-color: rgba(232, 245, 233, 0.9);
+        }
+        section#gallery {
+            background-color: rgba(220, 237, 255, 0.9);
+        }
+        section#map {
+            background-color: rgba(255, 248, 220, 0.9);
+        }
+        section#contact {
+            background-color: rgba(255, 230, 230, 0.9);
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Gallery Styles */
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            animation: fadeIn 2s;
+        }
+
+        .gallery-container img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fullscreen image view */
+        .full-image-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .full-image-container img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            animation: zoomIn 0.5s ease;
+        }
+
+        .full-image-container:target {
+            display: flex;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Хуш омадед ба Мактаби №72!</h1>
+        <p>Деҳаи Кулканд, Исфара</p>
+    </header>
+
+    <nav>
+        <a href="#home">Асосӣ</a>
+        <a href="#about">Дар бораи мо</a>
+        <a href="#gallery">Расм</a>
+        <a href="#map">Харита</a>
+        <a href="#contact">Тамос</a>
+        <!-- Links to the Signup and Login Pages -->
+        <a href="signup.html">Сабти ном</a>
+        <a href="login.html">Воридшавӣ</a>
+    </nav>
+
+    <section id="home">
+        <h2>Дар бораи мактаб</h2>
+        <p>Муассисаи таҳсилоти миёнаи умумӣ (МТМУ) №72
+            Ҷойгиршавӣ: Шаҳри Исфара, деҳаи Кулканд
+            Соли таъсис: 2005
+            Шумораи хонандагон:
+             • Ҳамагӣ: 570 нафар
+             • Духтарон: 289 нафар
+             • Писарон: 281 нафар
+            Шумораи омӯзгорон: 49 нафар
+            Хусусиятҳои асосӣ:
+             1. Таълим: Дар мактаб таълими фанҳои асосии барномаи давлатӣ ба роҳ монда шудааст, ки ба рушди донишҳои бунёдӣ ва тарбияи фарҳангӣ ва ахлоқии хонандагон равона шудааст.
+             2. Кормандон: 49 омӯзгори соҳибихтисос ба хонандагон дарс мегӯянд ва фаъолияти таълимиро бо истифода аз усулҳои муосир пеш мебаранд.
+             3. Иқтидори таълимӣ: Бо вуҷуди шумораи зиёди хонандагон, мактаб тамоми шароитҳоро барои таълими босифат фароҳам овардааст.
+            Нақши мактаб дар ҷомеа:
+             • МТМУ №72 як маркази муҳим барои таълими насли ҷавон дар деҳаи Кулканд мебошад.
+             • Он на танҳо ба таълими хонандагон, балки ба рушди фарҳанг ва ҳунари маҳал низ саҳм мегузорад.
+        </p>
+    </section>
+
+    <section id="about">
+        <h2>Дар бораи мо</h2>
+        <p>Мактаби №72 дар деҳаи зебои Кулканд ҷойгир аст. Бо таърихи дарозмуддати таълимоти босифат, мактаби мо мақсад дорад, ки насли навро бо донишу малакаҳои навин таъмин кунад.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-container">
+            <!-- Thumbnail images with links for fullscreen view -->
+            <a href="#img1"><img src="photo_2024-12-15_16-12-12.jpg" alt="Мактаб 1"></a>
+            <a href="#img2"><img src="photo_2024-12-15_16-12-17.jpg" alt="Мактаб 2"></a>
+            <a href="#img3"><img src="photo_2024-12-15_15-50-21.jpg" alt="Мактаб 3"></a>
+            <a href="#img4"><img src="photo_2024-12-15_15-50-20.jpg" alt="Мактаб 4"></a>
+            <a href="#img5"><img src="photo_2024-12-15_15-50-18.jpg" alt="Мактаб 5"></a>
+            <a href="#img6"><img src="photo_2024-12-15_15-50-29.jpg" alt="Мактаб 6"></a>
+            <a href="#img7"><img src="photo_2024-12-15_15-47-39 (4).jpg" alt="Мактаб 7"></a>
+        </div>
+
+        <!-- Fullscreen images -->
+        <div id="img1" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_16-12-12.jpg" alt="Мактаб 1">
+        </div>
+        <div id="img2" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_16-12-17.jpg" alt="Мактаб 2">
+        </div>
+        <div id="img3" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_15-50-21.jpg" alt="Мактаб 3">
+        </div>
+        <div id="img4" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_15-50-20.jpg" alt="Мактаб 4">
+        </div>
+        <div id="img5" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_15-50-18.jpg" alt="Мактаб 5">
+        </div>
+        <div id="img6" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_15-50-29.jpg" alt="Мактаб 6">
+        </div>
+        <div id="img7" class="full-image-container">
+            <a href="#" class="close-button">&times;</a>
+            <img src="photo_2024-12-15_15-47-39 (4).jpg" alt="Мактаб 7">
+        </div>
+    </section>
+
+    <section id="map">
+        <h2>Ҷойгиршавии мо</h2>
+        <iframe
+            src="https://www.google.com/maps/place/%D0%9C%D1%83%D0%B0%D1%81%D1%81%D0%B8%D1%81%D0%B0%D0%B8+%D1%82%D0%B0%D2%B3%D1%81%D0%B8%D0%BB%D0%BE%D1%82%D0%B8+%D0%BC%D0%B8%D1%91%D0%BD%D0%B0%D0%B8+%D1%83%D0%BC%D1%83%D0%BC%D0%B8%D0%B8+%E2%84%9672/@40.1434997,70.6853857,4126m/data=!3m1!1e3!4m15!1m8!3m7!1s0x38ba65c3d96a5e95:0xaa35a51d504476d0!2z0JrRg9C70LrQsNC90LQsINCi0LDQtNC20LjQutC40YHRgtCw0L0!3b1!8m2!3d40.1430416!4d70.7019783!16s%2Fm%2F0gtxxfj!3m5!1s0x38ba659209147b39:0xa7d7cbf013d80da3!8m2!3d40.1369591!4d70.6896527!16s%2Fg%2F11smmn_jzb?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <section id="contact">
+        <h2>Тамос</h2>
+        <p>Барои маълумоти бештар бо мо тамос гиред:</p>
+        <p>Телефонҳо:</p>
+        <p><strong>+992 987 04 26 68</strong></p>
+        <p><strong>+992 987 99 66 22</strong></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Мактаби №72 - Деҳаи Кулканд. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+    </footer>
+</body>
+</html>
